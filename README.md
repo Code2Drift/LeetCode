@@ -22,4 +22,5 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [1258-article-views-i](https://github.com/Code2Drift/LeetCode/tree/master/1258-article-views-i) |
 | [1827-invalid-tweets](https://github.com/Code2Drift/LeetCode/tree/master/1827-invalid-tweets) |
+| [2024-calculate-special-bonus](https://github.com/Code2Drift/LeetCode/tree/master/2024-calculate-special-bonus) |
 <!---LeetCode Topics End-->
