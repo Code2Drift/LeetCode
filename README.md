@@ -20,6 +20,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Database
 |  |
 | ------- |
+| [0183-customers-who-never-order](https://github.com/Code2Drift/LeetCode/tree/master/0183-customers-who-never-order) |
 | [1258-article-views-i](https://github.com/Code2Drift/LeetCode/tree/master/1258-article-views-i) |
 | [1670-patients-with-a-condition](https://github.com/Code2Drift/LeetCode/tree/master/1670-patients-with-a-condition) |
 | [1811-fix-names-in-a-table](https://github.com/Code2Drift/LeetCode/tree/master/1811-fix-names-in-a-table) |
