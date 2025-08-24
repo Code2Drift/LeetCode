@@ -11,16 +11,11 @@ def nth_highest_salary(employee: pd.DataFrame, N: int) -> pd.DataFrame:
         })
 
     ## negative N - invalid input
-    elif N < 0:
+    elif N <= 0:
         return pd.DataFrame({
             f"getNthHighestSalary({N})": [None]
         })
     
-    ## N is zero
-    elif N == 0:
-        return pd.DataFrame({
-            f"getNthHighestSalary({N})": [None]
-        }) 
 
     else:
         return pd.DataFrame({
