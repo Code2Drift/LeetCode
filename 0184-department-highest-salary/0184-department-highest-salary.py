@@ -11,27 +11,16 @@ def department_highest_salary(employee: pd.DataFrame, department: pd.DataFrame) 
     ## merge tables
     df_merge = employee.merge(
         department, left_on="departmentId", right_on="id", how="left"
-    )
-
-    df_merge.rename(
-        columns={
-            "name_y":"Department",
-            "salary":"Salary",
-            "name_x":"Employee"
-        }, inplace=True
+    ).rename(
+        columns={"name_y": "Department", "salary": "Salary", "name_x": "Employee"}
     )
 
     ## check salary based on department groups
-    depart_list = df_merge["Department"].unique()
-
-    for depart in depart_list:
-        max_salary = df_merge.loc[df_merge["Department"] == depart, "Salary"].max()
-        print(max_salary)
-        find_maxSalary = df_merge.loc[(df_merge["Salary"] == max_salary) & (df_merge["Department"] == depart)]
-        final_df = pd.concat([final_df, find_maxSalary], ignore_index=False)
+    max_per_dept = df_merge.groupby("Department")["Salary"].transform("max")
+    final_df = df_merge.loc[df_merge["Salary"] == max_per_dept]
     
     final_df.drop_duplicates(inplace=True, keep="last")
 
-    return final_df[["Department", "Employee", "Salary"]]
+    return final_df[["Department", "Employee", "Salary"]].reset_index(drop=True)
 
 
